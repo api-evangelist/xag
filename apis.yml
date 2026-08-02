@@ -1,9 +1,26 @@
 aid: xag
 name: XAG
-description: 'XAG is a company surfaced as a portfolio company of softbank-vision-fund and added to the
-  API Evangelist network as a stub for enrichment. Sector: frontier-tech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'XAG (Guangzhou, China) is an agricultural technology company building
+  autonomous farming solutions: agricultural drones (P150 Max, P150, P100 Pro, P60),
+  R100/R200 agricultural ground rovers, the APC2 AutoPilot console, and smart-farm
+  IoT devices. Backed by SoftBank Vision Fund. XAG operates a Chinese-language developer
+  Open Platform (open.xa.com) that integrates application management, device data
+  authorization, secure data communication, and message subscription, providing APIs
+  for second-party development on XAG products; public API documentation is still
+  largely unpublished.'
 url: https://raw.githubusercontent.com/api-evangelist/xag/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.xa.com/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,13 +29,69 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Frontier Tech
-apis: []
+- Agriculture
+- Drones
+- Robotics
+- IoT
+- Precision Agriculture
+- Agricultural Technology
+apis:
+- name: XAG Open Platform
+  description: 'XAG''s developer Open Platform (Chinese-language) integrating application
+    management, device data authorization, secure data communication, and message
+    subscription, offering APIs for retrieving device and operations data from XAG
+    agricultural drones, rovers, and IoT products. The public documentation catalog
+    (What is the Open Platform, Glossary, Product Features, Use Cases, Usage Guide,
+    Service APIs) is served from the platform but most sections are not yet published;
+    developer console access requires an account.'
+  humanURL: https://open.xa.com/platform/index
+  baseURL: https://open.xa.com/proxy-api
+  tags:
+  - Agriculture
+  - Drones
+  - IoT
+  - Open Platform
+  properties:
+  - type: Documentation
+    url: https://open.xa.com/platform/index
+  - type: Portal
+    url: https://open.xa.com
+common:
+- type: DomainSecurity
+  url: security/xag-domain-security.yml
+- type: Website
+  url: https://www.xa.com/en
+- type: DeveloperPortal
+  url: https://open.xa.com
+- type: Documentation
+  url: https://open.xa.com/platform/index
+- type: Login
+  url: https://open.xa.com/login
+- type: Support
+  url: https://www.xa.com/en/service/downloads
+- type: Blog
+  url: https://www.xa.com/en/news
+- type: PrivacyPolicy
+  url: https://www.xa.com/en/about/privacy
+- type: TermsOfService
+  url: https://www.xa.com/en/about/terms
+- type: Contact
+  url: https://www.xa.com/en/about/contacts
+- type: WellKnown
+  url: well-known/xag-well-known.yml
+- type: LLMsTxt
+  url: llms/xag-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

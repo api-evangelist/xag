@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+note: 'Probed the /.well-known/ discovery surface on the XAG website and the XAG
+  Open Platform developer host. www.xa.com returns real 404s for every document.
+  open.xa.com is a Vue SPA whose server returns the HTML app shell (HTTP 200,
+  text/html) for every unknown path, so its 200s are SPA fallbacks, not real
+  documents - recorded as spa-fallback. No genuine well-known documents were
+  found on either host.'
+hosts:
+- host: https://www.xa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+- host: https://xa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://open.xa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: spa-fallback
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: spa-fallback
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: spa-fallback
+  - path: /.well-known/api-catalog
+    status: 200
+    result: spa-fallback
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: spa-fallback
+  - path: /llms.txt
+    status: 200
+    result: spa-fallback
